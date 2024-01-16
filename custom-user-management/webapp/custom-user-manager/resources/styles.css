@@ -1,0 +1,18 @@
+#myDiv {
+    text-align: center;
+    margin-top: 50px;
+}
+ 
+#myButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+ 
+#myButton:hover {
+    background-color: #2980b9;
+}	
