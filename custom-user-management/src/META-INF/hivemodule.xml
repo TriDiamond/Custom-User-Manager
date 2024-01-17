@@ -4,7 +4,7 @@
 	<contribution configuration-id="com.polarion.xray.webui.administrationPageExtenders">
 		<extender name="Extension"
 				  parentNodeName="Custom User Management"
-				  pageUrl="/polarion/custom-user-manager/userman" 
+				  pageUrl="/polarion/custom-user-manager/usertag" 
 				  projectScope="true"
 				  projectGroupScope="true"
 				  repositoryScope="true"/>

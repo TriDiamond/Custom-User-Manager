@@ -20,6 +20,8 @@ public class CustomUserManagementServlet extends HttpServlet {
 	 */
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		//System.out.println("The Project Scope is" + req.getParameter("scope"));
+		//System.out.println("The Project Scope is" + req.get);
 		String action = req.getParameter("action");
 		try {
 			if ((action != null)) {
@@ -32,7 +34,9 @@ public class CustomUserManagementServlet extends HttpServlet {
 		} catch (Exception e) {
 			log.error("Exception is" + e.getMessage());
 		}
+		if(action == null) {
 		getServletContext().getRequestDispatcher("/static/index.html").forward(req, resp);
+		}
 	}
 
 }
