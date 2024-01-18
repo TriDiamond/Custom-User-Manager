@@ -7,7 +7,8 @@ import java.util.Map;
  
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
- 
+import javax.servlet.http.HttpSession;
+
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.polarion.alm.projects.model.IProject;
@@ -31,8 +32,10 @@ public class CustomUserManagementService {
  
     public void getUserDetails(HttpServletRequest req, HttpServletResponse resp) {
         try{
+        	System.out.println("Get User Details Method in Service Page");
         	PrintWriter out = resp.getWriter();
-            String projectId = "elibrary";
+        	String projectId = req.getParameter("projectId");
+            System.out.println("Project Id in service Page is :" + projectId);
             IProject trackerProject = trackerService.getProjectsService().getProject(projectId);
             IPObjectList<IUser> userList = trackerService.getProjectsService().getProjectUsers(trackerProject);
  
@@ -54,7 +57,7 @@ public class CustomUserManagementService {
             // String jsonProjectResponse = gson.toJson(userMap);
  
             // Wrap userMap in a JsonObject if needed
-            System.out.println("UserMap is" + userMap);
+          //  System.out.println("UserMap is" + userMap);
             JsonObject responseData = new JsonObject();
             responseData.add("userMap", gson.toJsonTree(userMap));
             String jsonProjectResponse = gson.toJson(responseData);

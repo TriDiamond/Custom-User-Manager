@@ -29,7 +29,7 @@
 
     <servlet-mapping>
         <servlet-name>UserManagement</servlet-name>
-        <url-pattern>/usertag/*</url-pattern>
+        <url-pattern>/usermana/*</url-pattern>
     </servlet-mapping>
 
     <session-config>

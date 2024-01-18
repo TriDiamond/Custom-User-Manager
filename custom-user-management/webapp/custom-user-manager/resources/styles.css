@@ -1,18 +1,35 @@
-#myDiv {
-    text-align: center;
-    margin-top: 50px;
+
+.polarion-rpw-table-header-row > th {
+  vertical-align: top;
+  text-align: left;
+  padding: 0px 4px;
+  height: 28px;
+  color: #757575;
+  font-weight: normal;
+  border-bottom: 1px solid #D2D7DA;
+}
+
+/* Existing styles for table */
+.polarion-rpw-table-content {
+    border-collapse: collapse;
+    width: 100%;
 }
  
-#myButton {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.polarion-rpw-table-content th, .polarion-rpw-table-content td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
 }
  
-#myButton:hover {
-    background-color: #2980b9;
-}	
+/* Your existing styles for the light row */
+.polarion-rpw-table-content-row-light {
+    background-color: #f2f2f2;
+}
+ 
+/* Your existing styles for the dark row */
+.polarion-rpw-table-content-row-dark {
+    background-color: #e0e0e0;
+}
+.polarion-rpe-content h3 {
+  font-size: 23px;
+}
